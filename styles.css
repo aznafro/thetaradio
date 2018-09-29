@@ -122,13 +122,13 @@ header .heading {
 header .heading .heading__text {
 	padding-top: 30vh;
 	margin-bottom: 4rem;
-	font-size: 4rem;
+	font-size: 3.5rem;
 	font-weight: 200;
 	color: wheat;
 }
 
 header .heading .heading__text span {
-	font-size: 3.5rem;
+	font-size: 3rem;
 }
 
 header .heading .heading__text p {
