@@ -1,0 +1,332 @@
+/*
+
+	wheat - primary
+	#CFAD57 - primaryDark
+
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html, body {
+	height: 100%;
+}
+
+body > * {
+	transition: .3s;
+}
+
+html {
+	font-family: Raleway;
+}
+
+.menu-toggle {
+	overflow: hidden;
+}
+
+.blur {
+	filter: blur(3px);
+}
+
+body {
+	box-sizing: border-box;
+}
+
+.container {
+	position: relative;
+	height: 100%;
+	margin-left: 6rem;
+	margin-right: 6rem;
+}
+
+.menu-box {
+	float: right;
+	color: white;
+	display: none;
+	cursor: pointer;
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 80px;
+	line-height: 80px;
+	font-size: 1.5rem;
+	z-index: 10;
+	border-bottom: 1px solid rgba(255, 255, 255, .5);
+}
+
+.nav__logo {
+	float: left;
+}
+
+.nav__logo a {
+	color: white;
+	text-decoration: none;
+}
+
+.nav__links-box {
+	float: right;
+}
+
+.nav__links {
+	list-style: none;
+}
+
+.nav__links li {
+	display: inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.nav__links li a {
+	color: white;
+	text-decoration: none;
+	padding: 10px 25px;
+	border-radius: 3px;
+	border: 3px solid transparent;
+	transition: .2s;
+}
+
+.nav__links li a:hover {
+	color: wheat;
+	border: 3px solid wheat;
+}
+
+.nav__links li a.link-hover {
+	color: wheat;
+	border: 3px solid wheat;
+}
+
+header {
+	width: 100%;
+	height: 100%;
+	background-image: url(images/bg-1.jpg);
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+header .heading {
+	height: calc(100% - 80px);
+}
+
+header .heading .heading__text {
+	padding-top: 30vh;
+	margin-bottom: 4rem;
+	font-size: 4rem;
+	font-weight: 200;
+	color: wheat;
+}
+
+header .heading .heading__text span {
+	font-size: 3.5rem;
+}
+
+header .heading .heading__text p {
+	font-size: 2rem;
+	margin-top: 20px;
+}
+
+.btn-box {
+	text-align: center;
+}
+
+.btn {
+	color: white;
+	background-color: #CFAD57;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	font-size: 1.5rem;
+	padding: 13px 30px;
+	transition: .2s;
+
+	cursor: pointer;
+}
+
+.btn:focus {
+	outline: none;
+}
+
+.btn:hover {
+	color: #CFAD57;
+	background-color: white;
+	border: 1px solid #CFAD57;
+	padding-bottom: 113px;
+	bottom: 0;
+}
+
+/* SECTIONS */
+main {
+	position: absolute;
+	top: 100vh;
+	width: 100%;
+}
+
+section {
+	width: 100%;
+	height: 100vh;
+}
+
+section h2 {
+	color: white;
+	font-size: 3rem;
+	font-weight: 200;
+	padding-top: 20vh;
+	line-height: 60px;
+}
+
+section h2 span.first-line {
+	font-size: 4.5rem;
+	font-weight: 800;
+}
+
+.section__artists {
+	background-image: url(images/vinyl-1.jpg);
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.section__gear {
+	background-image: url(images/record-player.jpg);
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.section__gear h2 {
+	color: #222;
+}
+
+.section__radio {
+	background-image: url(images/musician-3.jpg);
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/* FOOTER */
+footer {
+	position: absolute;
+	top: 400vh;
+	background-color: #333;
+	text-align: center;
+	color: white;
+	width: 100%;
+	padding: 2rem;
+}
+
+.footer__text {
+	margin-bottom: 2rem;
+}
+
+.social-media-container {
+	width: 400px;
+	margin: 0 auto;
+}
+
+.sm-icon {
+	display: inline-block;
+}
+
+.sm-icon img {
+  	width: 50px;
+  	height: 50px;
+}
+
+.sm-icon #instagram {
+    width: 2.1rem; 
+}
+
+.sm-icon:not(:last-child) {
+    margin-right: 2rem; 
+}
+
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 975px) {
+	section h2 span.first-line {
+		font-size: 3.8rem;
+	}
+
+	section h2 {
+		font-size: 1.8rem;
+		line-height: 3rem;
+	}
+}
+
+@media only screen and (max-width: 860px) {
+	.container {
+		margin-left: 3rem;
+		margin-right: 3rem;
+	}
+
+	.menu-box {
+		display: block;
+	}
+
+	.nav__links-box {
+		position: absolute;
+		top: 80px;
+		z-index: 1;
+		width: 100%;
+		height: 0;
+		overflow: hidden;
+		transition: .3s;
+	}
+
+	.nav__links {
+		height: 100%;
+	}
+
+	.display-nav {
+		height: calc(100vh - 80px);
+	}
+
+	.nav__links li {
+		display: block;
+		text-align: center;
+		padding: 0;
+		border-bottom: 1px solid gray;
+	}
+
+	.nav__links li a {
+		display: inherit;
+		font-size: 2.5rem;
+		color: wheat;
+	}
+
+	.nav__links li a:hover {
+		color: white;
+		background-color: #CFAD57;
+		border: 1px solid #CFAD57;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	html {
+		font-size: 65%;
+	}
+
+	section h2 {
+		font-size: 2.3rem;
+		line-height: 3rem;
+	}
+
+	.social-media-container {
+		width: 100%;
+	}
+
+	.sm-icon:not(:last-child) {
+		margin-right: 1rem;
+	}
+}
