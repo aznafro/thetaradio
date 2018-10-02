@@ -300,7 +300,7 @@ section h2 {
 }
 
 .swiper-slide:nth-child(5) {
-	background-image: url("../images/artist-5.jpg");
+	background-image: url("../images/artist-5-small.jpg");
 }
 
 .swiper-slide:nth-child(5) h2,
