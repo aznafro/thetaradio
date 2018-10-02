@@ -445,8 +445,23 @@ div[class^="gear__item"]:hover .gear__link .gear__link--small {
 
 .col-1-of-4 {
 	float: left;
-	width: calc((100% - 3 * 1rem) / 4);
-	height: 80vh;
+	height: 90vh;
+}
+
+.col-1-of-4:nth-child(1) {
+	width: 20%;
+}
+
+.col-1-of-4:nth-child(2) {
+	width: 22%;
+}
+
+.col-1-of-4:nth-child(3) {
+	width: 24%;
+}
+
+.col-1-of-4:nth-child(4) {
+	width: 27%;
 }
 
 .col-1-of-4:not(:last-child) {
@@ -455,13 +470,31 @@ div[class^="gear__item"]:hover .gear__link .gear__link--small {
 
 .channel {
 	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
 	height: 100%;
 	background-color: #222;
+	border-top-right-radius: 50%;
+	border-bottom-right-radius: 50%;
+	clip-path: polygon(0 33%, 100% 0, 100% 100%, 0 66%);
+	-webkit-clip-path: polygon(0 33%, 100% 0, 100% 100%, 0 66%);
+	transition: .2s;
 }
 
 .col-1-of-4:nth-child(1) .channel {
-	clip-path: polygon(0 0);
-	-webkit-clip-path: polygon(0 33%, 70% 20%, 100% 50%, 70% 80%, 0 66%);
+	height: 50%;
+}
+
+.col-1-of-4:nth-child(2) .channel {
+	height: 70%;
+}
+
+.col-1-of-4:nth-child(3) .channel {
+	height: 90%;
+}
+
+.col-1-of-4:nth-child(4) .channel {
+	height: 100%;
 }
 
 .channel__image {
@@ -475,13 +508,26 @@ div[class^="gear__item"]:hover .gear__link .gear__link--small {
 .channel h3 {
 	position: absolute;
 	top: 50%;
-	color: white;
+	left: 50%;
+	color: wheat;
 	font-size: 3rem;
 	text-align: center;
-	transform: rotate(90deg);
+	transform: translate(-50%, -50%) rotate(90deg);
+	opacity: 0;
+	transition: .2s;
 }
 
+.col-1-of-4:hover .channel {
+	transform: translateY(-50%) scale(1.2);
+}
 
+.channel:hover h3 {
+	opacity: 1;
+}
+
+.channel:hover .channel__image {
+	filter: blur(2px);
+}
 
 /* FOOTER */
 footer {
