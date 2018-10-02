@@ -156,8 +156,12 @@ header .heading .heading__text p {
 	text-align: center;
 }
 
-.btn {
+.btn,
+.btn:link,
+.btn:visited {
 	color: white;
+	text-decoration: none;
+	display: inline-block;
 	background-color: #CFAD57;
 	border: 1px solid transparent;
 	border-radius: 3px;
@@ -434,7 +438,7 @@ div[class^="gear__item"]:hover .gear__link .gear__link--small {
 
 .row {
 	width: 80%;
-	margin: 2rem auto 0 auto;
+	margin: 4rem auto 0 auto;
 }
 
 .row::after {
@@ -445,23 +449,8 @@ div[class^="gear__item"]:hover .gear__link .gear__link--small {
 
 .col-1-of-4 {
 	float: left;
-	height: 90vh;
-}
-
-.col-1-of-4:nth-child(1) {
-	width: 20%;
-}
-
-.col-1-of-4:nth-child(2) {
-	width: 22%;
-}
-
-.col-1-of-4:nth-child(3) {
-	width: 24%;
-}
-
-.col-1-of-4:nth-child(4) {
-	width: 27%;
+	width: calc((100% - 3 * 1rem) / 4);
+	height: 75vh;
 }
 
 .col-1-of-4:not(:last-child) {
@@ -474,26 +463,15 @@ div[class^="gear__item"]:hover .gear__link .gear__link--small {
 	transform: translateY(-50%);
 	height: 100%;
 	background-color: #222;
-	border-top-right-radius: 50%;
-	border-bottom-right-radius: 50%;
-	clip-path: polygon(6% 60%, 7% 51%, 6% 40%, 0 33%, 100% 0, 100% 100%, 0 66%);
-	-webkit-clip-path: polygon(6% 60%, 7% 51%, 6% 40%, 0 33%, 100% 0, 100% 100%, 0 66%);
+	border-radius: 3px;
 	transition: .2s;
 }
 
-.col-1-of-4:nth-child(1) .channel {
-	height: 50%;
+.col-1-of-4:nth-child(odd) .channel {
+	height: 80%;
 }
 
-.col-1-of-4:nth-child(2) .channel {
-	height: 70%;
-}
-
-.col-1-of-4:nth-child(3) .channel {
-	height: 90%;
-}
-
-.col-1-of-4:nth-child(4) .channel {
+.col-1-of-4:nth-child(even) .channel {
 	height: 100%;
 }
 
@@ -510,7 +488,7 @@ div[class^="gear__item"]:hover .gear__link .gear__link--small {
 	top: 50%;
 	left: 50%;
 	color: wheat;
-	font-size: 3rem;
+	font-size: 4rem;
 	text-align: center;
 	transform: translate(-50%, -50%) rotate(90deg);
 	opacity: 0;
@@ -518,7 +496,7 @@ div[class^="gear__item"]:hover .gear__link .gear__link--small {
 }
 
 .col-1-of-4:hover .channel {
-	transform: translateY(-50%) scale(1.2);
+	transform: translateY(-50%) scale(1.1);
 }
 
 .channel:hover h3 {

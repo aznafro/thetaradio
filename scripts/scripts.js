@@ -1,11 +1,18 @@
 document.querySelector(".menu-box").addEventListener("click", function() {
 	document.querySelector(".nav__links-box").classList.toggle("display-nav");
 	document.querySelector("html").classList.toggle("menu-toggle");
-	// document.querySelector("header").classList.toggle("blur");
 	document.querySelectorAll("body > *:not(nav)").forEach(function(section) {
 		section.classList.toggle("blur");
 	});
+});
 
+document.querySelector(".discover").addEventListener("click", function(e) {
+	e.preventDefault();
+
+	document.querySelector(this.getAttribute("href")).scrollIntoView({
+		behavior: "smooth",
+		block: "start"
+	});
 });
 
 var navLinks = document.querySelectorAll(".nav__links li a");
