@@ -433,7 +433,7 @@ div[class^="gear__item"]:hover .gear__link .gear__link--small {
 }
 
 .row {
-	width: 70%;
+	width: 80%;
 	margin: 2rem auto 0 auto;
 }
 
@@ -476,8 +476,8 @@ div[class^="gear__item"]:hover .gear__link .gear__link--small {
 	background-color: #222;
 	border-top-right-radius: 50%;
 	border-bottom-right-radius: 50%;
-	clip-path: polygon(0 33%, 100% 0, 100% 100%, 0 66%);
-	-webkit-clip-path: polygon(0 33%, 100% 0, 100% 100%, 0 66%);
+	clip-path: polygon(6% 60%, 7% 51%, 6% 40%, 0 33%, 100% 0, 100% 100%, 0 66%);
+	-webkit-clip-path: polygon(6% 60%, 7% 51%, 6% 40%, 0 33%, 100% 0, 100% 100%, 0 66%);
 	transition: .2s;
 }
 
