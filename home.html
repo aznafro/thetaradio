@@ -7,7 +7,8 @@
 	<meta http-equiv="X-UA-Compatibility" content="IE=edge">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Raleway:200,400" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<link rel="shortcut icon" type="img/png" href="images/favicon.png">
 </head>
 <body>
@@ -30,7 +31,7 @@
 		<div class="heading">
 			<div class="container">
 				<h1 class="heading__text">
-					Find Your Music<br>
+					<span class="first-line">Find Your Music</span><br>
 					<span>Find Your Place</span>
 					<p>New Artists and great gear to fuel your audiophile needs</p>
 				</h1>
@@ -48,20 +49,50 @@
 				 	To the lastest up and coming artists<br>
 				 	We've got you covered
 			 	</h2>
-			 	<div class="artist-container">
-					<div class="artist-box">
-						<img src="images/artist-1.jpg">
-					</div>
-					<div class="artist-box">
-						<img src="images/artist-2.jpg">
-					</div>
-					<div class="artist-box">
-						<img src="images/artist-3.jpg">
-					</div>
-					<div class="artist-box">
-						<img src="images/artist-4.jpg">
-					</div>
-				</div>
+			 	<div class="swiper-container">
+			 		<div class="swiper-wrapper">
+			 			<div class="swiper-slide">
+			 				<a href="">
+			 					<h2>Yoko Ono</h2>
+			 					<p>Some say she is pure evil. So her music's gotta be awesome right!</p>
+			 				</a>
+		 				</div>
+			 			<div class="swiper-slide">
+				 			<a href="">
+				 				<h2>Heather Graham</h2>
+				 				<p>One of kind. Voice of an angel. Catch her at the next SXSW!</p>
+			 				</a>
+			 			</div>
+			 			<div class="swiper-slide">
+			 				<a href="">
+				 				<h2>Loko Ono</h2>
+				 				<p>Inspired by the late Emmy Award winning rapper, they draw their inspiration from
+			 				   	local cuisine</p>
+		 				   	</a>
+			 			</div>
+			 			<div class="swiper-slide">
+			 				<a href="">
+				 				<h2>DJ Skelter</h2>
+				 				<p>Deep house. Deep bass. Don't bother me, I'm groovin'</p>
+				 			</a>
+			 			</div>
+			 			<div class="swiper-slide">
+			 				<a href="">
+				 				<h2>Sexama<br>
+				 				Phone</h2>
+				 				<p>Smooth ballads that make Careless Whisper sound rated G</p>
+				 			</a>
+			 			</div>
+			 			<div class="swiper-slide">
+			 				<a href="">
+				 				<h2>Peter Groot</h2>
+				 				<p>Country never sounded this not country</p>
+				 			</a>
+			 			</div>
+			 		</div>
+
+			 		<div class="swiper-pagination"></div>
+			 	</div>
 			</div>
 		</section>
 		<section class="section__gear">
@@ -71,6 +102,48 @@
 				 	Great quality gear<br>
 				 	So you can hear every intended note
 			 	</h2>
+			 	<div class="gear-container">
+			 		<div class="gear__item--main">
+			 			<a class="gear__link" href="">
+			 				<div class="gear__link--text">
+			 					<h3>Headsets</h3>
+			 					<p>Not your average Beats by Dr</p>
+			 				</div>
+		 				</a>
+			 		</div>
+			 		<div class="gear__item--secondary">
+			 			<a class="gear__link" href="">
+				 			<div class="gear__link--text">
+				 				<h3>Guitars</h3>
+				 				<p>For that sick riff control you've been looking for</p>
+				 			</div>
+		 				</a>
+			 		</div>
+			 		<div class="gear__item--secondary">
+			 			<a class="gear__link" href="">
+				 			<div class="gear__link--text gear__link--small">
+				 				<h3>Keyboards</h3>
+				 				<p>Korg to Yamaha, we've got it all</p>
+			 				</div>
+		 				</a>
+			 		</div>
+			 		<div class="gear__item--secondary">
+			 			<a class="gear__link" href="">
+			 				<div class="gear__link--text gear__link--small">
+				 				<h3>Mixers</h3>
+				 				<p>For producers and sound engineers</p>
+				 			</div>
+		 				</a>
+			 		</div>
+			 		<div class="gear__item--secondary">
+			 			<a class="gear__link" href="">
+			 				<div class="gear__link--text gear__link--small">
+				 				<h3>Casettes</h3>
+				 				<p>You read that correctly</p>
+			 				</div>
+		 				</a>
+			 		</div>
+			 	</div>
 			</div>
 		</section>
 		<section class="section__radio">
@@ -79,21 +152,83 @@
 					<span class="first-line">Follow our Channels</span><br>
 				 	And never miss a live stream of your favorite artist
 			 	</h2>
+			 	<div class="row">
+			 		<div class="col-1-of-4">
+			 			<div class="channel">
+			 				<img class="channel__image" src="images/itunes.svg">
+			 				<h3>iTunes</h3>
+			 			</div>
+			 		</div>
+			 		<div class="col-1-of-4">
+				 		<div class="channel">
+				 			<img class="channel__image" src="images/lastfm.svg">
+				 			<h3>last.fm</h3>
+				 		</div>
+			 		</div>
+			 		<div class="col-1-of-4">
+				 		<div class="channel">
+				 			<img class="channel__image" src="images/spotify.svg">
+			 				<h3>Spotify</h3>
+				 		</div>
+			 		</div>
+			 		<div class="col-1-of-4">
+			 			<div class="channel">
+				 			<img class="channel__image" src="images/soundcloud.svg">
+			 				<h3>SoundCloud</h3>
+				 		</div>
+			 		</div>
+			 	</div>
 			</div>
 		</section>
 	</main>
 	<footer>
         <div class="container">
-            <h3 class="footer__text">Also Follow Us On Social Media</h3> 
-            <div class="social-media-container">
-                <div class="sm-icon"><a href="https://www.twitter.com" target="_blank"><img src="images/twitter.svg" alt="Twitter Link"></a></div>
-                <div class="sm-icon"><a href="https://www.facebook.com" target="_blank"><img src="images/facebook.svg" alt="Facebook Link"></a></div>
-                <div class="sm-icon"><a href="https://www.instagram.com" target="_blank"><img src="images/instagram.svg" alt="Instagram Link"></a></div>
-                <div class="sm-icon"><a href="https://www.pinterest.com" target="_blank"><img src="images/youtube.svg" alt="YoutTube Link"></a></div>
-            </div>
+        	<div class="footer-box footer-box__left">
+        		<div>
+        			<a class="footer-link" href="#">
+        				<h3 class="footer-heading">&Theta; Radio</h3>
+        				<img class="footer-image" src="images/footer-image.png">
+        			</a>
+        		</div>
+        		<ul>
+        			<li><a class="footer-link" href="">Blog</a></li>
+        			<li><a class="footer-link" href="">Career</a></li>
+        			<li><a class="footer-link" href="">Events</a></li>
+        			<li><a class="footer-link" href="">Contact</a></li>
+        		</ul>
+        	</div>
+        	<div class="footer-box footer-box__right">
+        		<h3 class="footer__text">Also Follow Us On Social Media</h3> 
+	            <div class="social-media-container">
+	                <div class="sm-icon"><a href="https://www.twitter.com" target="_blank"><img src="images/twitter.svg" alt="Twitter Link"></a></div>
+	                <div class="sm-icon"><a href="https://www.facebook.com" target="_blank"><img src="images/facebook.svg" alt="Facebook Link"></a></div>
+	                <div class="sm-icon"><a href="https://www.instagram.com" target="_blank"><img src="images/instagram.svg" alt="Instagram Link"></a></div>
+	                <div class="sm-icon"><a href="https://www.pinterest.com" target="_blank"><img src="images/youtube.svg" alt="YoutTube Link"></a></div>
+	            </div>
+        	</div>
         </div>
 	</footer>
 
-	<script type="text/javascript" src="scripts.js"></script>
+	<script type="text/javascript" src="scripts/swiper.min.js"></script>
+	<script type="text/javascript" src="scripts/scripts.js"></script>
+	<script type="text/javascript">
+		var swiper = new Swiper(".swiper-container", {
+			effect: "coverflow",
+			grabCursor: true,
+			centeredSlides: true,
+			slidesPerView: "auto",
+			coverflowEffect: {
+				rotate: 70,
+				stretch: 0,
+				depth: 100,
+				modifier: 1,
+				slideShadows: true
+			},
+
+			pagination: {
+				el: ".swiper-pagination"
+			}
+		});
+	</script>
 </body>
 </html>
