@@ -529,25 +529,38 @@ footer {
 	font-size: 1.5rem;
 }
 
-.footer-box ul {
-	width: 70%;
-	list-style: none;
-	margin-left: 1.5rem;
+.footer-image {
+	width: 8rem;
+	height: 8rem;
 }
 
-.footer-box ul li {
+.footer-box__left > * {
+	float: left;
+}
+
+.footer-box__left div {
+	width: 30%;
+}
+
+.footer-box__left ul {
+	width: 70%;
+	list-style: none;
+	text-align: center;
+}
+
+.footer-box__left ul li {
 	display: inline-block;
 	padding: 0 .9rem;
 }
 
-.footer-box ul li a:link,
-.footer-box ul li a:visited {
+.footer-box__left ul li a:link,
+.footer-box__left ul li a:visited {
 	display: inline-block;
 	position: relative;
 	font-size: 1.2rem;
 }
 
-.footer-box ul li a::after {
+.footer-box__left ul li a::after {
 	content: "";
 	position: absolute;
 	top: 100%;
@@ -558,17 +571,8 @@ footer {
 	transition: .2s;
 }
 
-.footer-box ul li a:hover::after {
+.footer-box__left ul li a:hover::after {
 	width: 100%;	
-}
-
-.footer-image {
-	width: 8rem;
-	height: 8rem;
-}
-
-.footer-box__left > * {
-	float: left;
 }
 
 .footer-box__left::after {
@@ -589,8 +593,7 @@ footer {
 }
 
 .social-media-container {
-	width: 50%;
-	margin: 0 auto;
+	text-align: center;
 }
 
 .sm-icon {
@@ -748,6 +751,23 @@ footer {
 	.col-1-of-4:nth-child(odd) .channel {
 		height: 90%;
 	}
+
+	.footer-box__left div {
+		width: 100%;
+		text-align: center;
+	}
+
+	.footer-box__left ul {
+		width: 100%;
+	}
+
+	.footer-box__right {
+		padding-left: 0;
+	}
+
+	.sm-icon:not(:last-child) {
+		margin-right: 1.5rem;
+	}
 }
 
 @media only screen and (max-width: 600px) {
@@ -760,14 +780,6 @@ footer {
 		padding-bottom: 5vh;
 		font-size: 2.3rem;
 		line-height: 3rem;
-	}
-
-	.social-media-container {
-		width: 100%;
-	}
-
-	.sm-icon:not(:last-child) {
-		margin-right: 1rem;
 	}
 
 	.swiper-slide {
@@ -826,5 +838,30 @@ footer {
 
 	.channel .channel__image {
 		height: 80%;
+	}
+
+	.footer-box {
+		float: unset;
+		width: 100%;
+	}
+
+	.footer-box ul {
+		width: 100%;
+		margin-left: 0;
+		margin-top: 10px;
+	}
+
+	.footer-box__left > * {
+		float: unset;
+		text-align: center;
+	}
+
+	.footer-box__right {
+		margin-top: 20px;
+		padding-left: 0;
+	}
+
+	.sm-icon:not(:last-child) {
+		margin-right: 1rem;
 	}
 }
