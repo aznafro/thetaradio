@@ -34,4 +34,21 @@ window.addEventListener("scroll", function() {
 		document.querySelector("nav").classList.remove("nav-sticky");
 	}
 	currentY = window.scrollY;
-})
+});
+
+var bumpedUp = false;
+window.addEventListener("scroll", () => {
+	let elTop = document.querySelector(".footer-image").getBoundingClientRect().top;
+	if(window.innerWidth <= 860) {
+		if(!bumpedUp && elTop < 500) {
+			document.querySelector("#bg-music").classList.add("bump-up");
+			bumpedUp = true;
+		} else if(bumpedUp && elTop > 500) {
+			document.querySelector("#bg-music").classList.remove("bump-up");
+			bumpedUp = false;
+		}
+	} else if(bumpedUp && elTop > 500) {
+		document.querySelector("#bg-music").classList.remove("bump-up");
+		bumpedUp = false;
+	}
+});
