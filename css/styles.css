@@ -350,7 +350,7 @@ div[class^="gear__item"] {
 
 div[class^="gear__item"]:hover {
 	border: 10px solid wheat;
-	z-index: 10;
+	z-index: 2;
 	transform: scale(1.07);
 }
 
